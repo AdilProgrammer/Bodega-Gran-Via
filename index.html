@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodega Gran Via | Eat & Drink</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts (elegant combination) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS (Animate on Scroll) library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== STICKY NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
+        <div class="container">
+            <!-- logo & restaurant name (EASY TO CHANGE) -->
+            <a class="navbar-brand fw-bold" href="#">
+                <!-- <img src="https://images.unsplash.com/photo-1633332751192-6b1b4e4c5b8a?w=50&h=50&fit=crop&auto=format" alt="restaurant logo" width="40" height="40" class="d-inline-block align-text-top rounded-circle me-2"> -->
+                <span id="restaurantNameNav">Bodega Gran Via</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#featured">Featured</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reservation">Reserve</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION (fullscreen parallax) ===== -->
+    <section id="hero" class="hero-section d-flex align-items-center justify-content-center text-center">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content" data-aos="zoom-in" data-aos-duration="1500">
+            <h1 class="display-2 fw-bold text-white mb-4" id="restaurantNameHero">Bodega Gran Via</h1>
+            <p class="lead text-white mb-5" id="heroTagline">Experience culinary artistry in every bite</p>
+            <a href="#reservation"
+                class="btn btn-outline-light btn-lg rounded-pill px-5 py-3 fw-bold smooth-scroll">Book a table <i
+                    class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <!-- <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="display-5 fw-semibold mb-4" id="aboutHeading">Our Story</h2>
+                    <p class="lead" id="aboutText1">Founded in 2010, La Belle Table brings the soul of French
+                        countryside cuisine to the heart of the city. We believe in organic ingredients, wood‑fired
+                        perfection, and warm hospitality.</p>
+                    <p class="mb-4" id="aboutText2">Every dish tells a story — from our signature duck confit to the
+                        delicate crème brûlée. Join us for an unforgettable dining experience.</p>
+                    <a href="#menu" class="btn btn-dark rounded-pill px-4 py-2 smooth-scroll">Explore menu <i
+                            class="fas fa-utensils ms-2"></i></a>
+                </div> -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="display-5 fw-semibold mb-4" id="aboutHeading">Our Story</h2>
+                    <p class="lead" id="aboutText1">
+                        Founded in the heart of FiDi, Bodega Gran Via brings the vibrant spirit of Spanish tapas culture
+                        to historic Stone Street in New York City. We celebrate bold flavors, shared plates, and a
+                        lively atmosphere.
+                    </p>
+                    <p class="mb-4" id="aboutText2">
+                        From authentic pinchos to traditional tapas, each dish is paired with a curated selection of
+                        Spanish wines. Join us for a true taste of Spain in one of NYC’s most historic settings.
+                    </p>
+                    <a href="#menu" class="btn btn-dark rounded-pill px-4 py-2 smooth-scroll">
+                        Explore menu <i class="fas fa-utensils ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&auto=format"
+                        alt="restaurant interior" class="img-fluid rounded-4 shadow-lg">
+                    <!-- <img src="/hero2.jpg" alt="restaurant interior" class="img-fluid rounded-4 shadow-lg"> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED DISHES SECTION ===== -->
+    <section id="featured" class="py-5">
+        <div class="container py-4">
+            <h2 class="display-5 fw-semibold text-center mb-5" data-aos="fade-down">Signature dishes</h2>
+            <div class="row g-4">
+                <!-- card 1 -->
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card dish-card h-100 border-0 shadow-sm">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&auto=format"
+                                class="card-img-top" alt="Grilled salmon">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Herb‑crusted Salmon</h5>
+                            <p class="card-text text-muted">with lemon butter sauce</p>
+                            <span class="badge bg-dark rounded-pill px-3 py-2">$24</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card dish-card h-100 border-0 shadow-sm">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50?w=400&auto=format"
+                                class="card-img-top" alt="Burger">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Truffle Burger</h5>
+                            <p class="card-text text-muted">Angus beef, caramelized onions</p>
+                            <span class="badge bg-dark rounded-pill px-3 py-2">$19</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card dish-card h-100 border-0 shadow-sm">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&auto=format"
+                                class="card-img-top" alt="Pizza">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Margherita Classica</h5>
+                            <p class="card-text text-muted">fresh basil & buffalo mozzarella</p>
+                            <span class="badge bg-dark rounded-pill px-3 py-2">$18</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 4 -->
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="400">
+                    <div class="card dish-card h-100 border-0 shadow-sm">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1513442542250-854d436a73f2?w=400&auto=format"
+                                class="card-img-top" alt="Pasta">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Lobster Ravioli</h5>
+                            <p class="card-text text-muted">saffron cream sauce</p>
+                            <span class="badge bg-dark rounded-pill px-3 py-2">$32</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MENU SECTION with CATEGORIES (tabs) ===== -->
+    <section id="menu" class="py-5 bg-light">
+        <div class="container py-4">
+            <h2 class="display-5 fw-semibold text-center mb-5" data-aos="fade-down">Explore our menu</h2>
+            <!-- tabs navigation -->
+            <ul class="nav nav-pills justify-content-center mb-5 gap-2" id="menuTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="btn btn-outline-dark rounded-pill px-4 active" id="starters-tab"
+                        data-bs-toggle="pill" data-bs-target="#starters" type="button">Starters</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-dark rounded-pill px-4" id="main-tab" data-bs-toggle="pill"
+                        data-bs-target="#main" type="button">Main Course</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-dark rounded-pill px-4" id="desserts-tab" data-bs-toggle="pill"
+                        data-bs-target="#desserts" type="button">Desserts</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-dark rounded-pill px-4" id="drinks-tab" data-bs-toggle="pill"
+                        data-bs-target="#drinks" type="button">Drinks</button>
+                </li>
+            </ul>
+            <!-- tab content -->
+            <div class="tab-content" id="menuTabContent">
+                <!-- Starters -->
+                <div class="tab-pane fade show active" id="starters" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">French onion soup</span><span class="text-dark">$12</span></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Tuna tartare</span><span class="text-dark">$16</span></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Garlic shrimp</span><span class="text-dark">$14</span></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Bruschetta trio</span><span class="text-dark">$11</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main Course -->
+                <div class="tab-pane fade" id="main" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Grilled ribeye steak</span><span class="text-dark">$38</span></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Pan‑seared sea bass</span><span class="text-dark">$29</span></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Mushroom risotto</span><span class="text-dark">$22</span></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Duck confit</span><span class="text-dark">$34</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Desserts -->
+                <div class="tab-pane fade" id="desserts" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Crème brûlée</span><span class="text-dark">$10</span></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Molten chocolate cake</span><span class="text-dark">$12</span></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Cheesecake du jour</span><span class="text-dark">$9</span></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Seasonal sorbet</span><span class="text-dark">$7</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Drinks -->
+                <div class="tab-pane fade" id="drinks" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Château Margaux '12</span><span class="text-dark">$120</span></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Craft beer selection</span><span class="text-dark">$8</span></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Signature cocktail</span><span class="text-dark">$14</span></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-item d-flex justify-content-between border-bottom pb-2"><span
+                                    class="fw-bold">Fresh mint lemonade</span><span class="text-dark">$6</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY SECTION ===== -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="display-5 fw-semibold text-center mb-5" data-aos="fade-down">Moments at our place</h2>
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in"><img
+                        src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=400&auto=format"
+                        class="img-fluid rounded-3 gallery-img" alt="dish"></div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100"><img
+                        src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop&auto=format"
+                        class="img-fluid rounded-3 gallery-img" alt="interior"></div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200"><img
+                        src="https://images.unsplash.com/photo-1543353071-087092ec393a?w=400&auto=format"
+                        class="img-fluid rounded-3 gallery-img" alt="plate"></div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300"><img
+                        src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=800&h=600&fit=crop&auto=format"
+                        class="img-fluid rounded-3 gallery-img" alt="cocktail"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS CAROUSEL ===== -->
+    <section id="testimonials" class="py-5 bg-dark text-white">
+        <div class="container py-4">
+            <h2 class="display-5 fw-semibold text-center mb-5" data-aos="fade-down">What guests say</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-column align-items-center text-center px-4">
+                            <i class="fas fa-quote-right fa-3x mb-3 opacity-50"></i>
+                            <p class="lead fst-italic">"Exquisite flavors and impeccable service. The tasting menu is a
+                                journey."</p>
+                            <h5 class="mt-3">— Emma Watson</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center text-center px-4">
+                            <i class="fas fa-quote-right fa-3x mb-3 opacity-50"></i>
+                            <p class="lead fst-italic">"Best duck confit I've ever had. Cozy ambiance, will return."</p>
+                            <h5 class="mt-3">— James Rodríguez</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center text-center px-4">
+                            <i class="fas fa-quote-right fa-3x mb-3 opacity-50"></i>
+                            <p class="lead fst-italic">"Beautiful setting, the staff treated us like royalty."</p>
+                            <h5 class="mt-3">— Lin Zhang</h5>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESERVATION FORM ===== -->
+    <section id="reservation" class="py-5 bg-light">
+        <div class="container py-4">
+            <h2 class="display-5 fw-semibold text-center mb-5" data-aos="fade-down">Book your table</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="reservationForm" class="row g-4 shadow-lg p-4 p-md-5 rounded-4 bg-white">
+                        <div class="col-md-6">
+                            <label class="form-label">Your name</label>
+                            <input type="text" class="form-control form-control-lg rounded-pill" placeholder="John Doe">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control form-control-lg rounded-pill"
+                                placeholder="hello@example.com">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Date</label>
+                            <input type="date" class="form-control form-control-lg rounded-pill">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Time</label>
+                            <input type="time" class="form-control form-control-lg rounded-pill">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Guests</label>
+                            <select class="form-select form-select-lg rounded-pill">
+                                <option>1 person</option>
+                                <option>2 people</option>
+                                <option>3 people</option>
+                                <option>4+ people</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Special requests</label>
+                            <textarea class="form-control rounded-4" rows="2"></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-dark btn-lg rounded-pill px-5 mt-3">Confirm
+                                reservation</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GOOGLE MAPS + CONTACT + SOCIAL ===== -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h3 class="fw-semibold mb-4">Find us</h3>
+                    <!-- Google Maps placeholder (static map image for demo – replace with iframe) -->
+                    <!-- <div class="rounded-4 overflow-hidden shadow mb-4">
+            <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69c07b?w=600&auto=format" alt="map" class="img-fluid w-100" style="filter: grayscale(0.3);">
+          </div> -->
+                    <div class="rounded-4 overflow-hidden shadow mb-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.8413297446987!2d-3.6001927999999994!3d37.180241599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fcc03805e717%3A0x2669196135764b92!2sC.%20Gran%20V%C3%ADa%20de%20Col%C3%B3n%2C%2041%2C%20b%2C%20Centro%2C%2018001%20Granada%2C%20Spain!5e0!3m2!1sen!2s!4v1774214041526!5m2!1sen!2s"
+                            width="100%" height="300" style="border:0; filter: grayscale(0.3);" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><i class="fas fa-map-marker-alt me-2 text-dark"></i> <span id="restaurantAddress">12 Rue
+                                    de la Paix, Paris</span></p>
+                            <p><i class="fas fa-phone me-2 text-dark"></i> <span id="restaurantPhone">+33 1 23 45 67
+                                    89</span></p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><i class="fas fa-envelope me-2 text-dark"></i> <span
+                                    id="restaurantEmail">hello@labelletable.com</span></p>
+                            <div class="social-icons mt-3">
+                                <a href="#" class="text-dark me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a href="#" class="text-dark me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                                <a href="#" class="text-dark me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#" class="text-dark"><i class="fab fa-tripadvisor fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="fw-semibold mb-4">Opening hours</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Monday – Friday: 11:30 AM – 10:00 PM</li>
+                        <li class="mb-2">Saturday: 10:00 AM – 11:00 PM</li>
+                        <li class="mb-2">Sunday: 10:00 AM – 9:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODERN FOOTER ===== -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; <span id="footerRestaurantName">La Belle Table</span> 2025. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

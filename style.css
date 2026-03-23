@@ -1,0 +1,211 @@
+/* style.css */
+/* ===== VARIABLES (change palette here) ===== */
+:root {
+  --primary-dark: #1e1e1e;
+  --accent-gold: #c8a97e;
+  --bg-light: #faf7f2;
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #2b2b2b;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+/* ===== NAVBAR ===== */
+#mainNavbar {
+  background: transparent;
+  transition: background 0.3s ease, padding 0.3s ease;
+  padding: 1.2rem 0;
+}
+
+#mainNavbar.navbar-scrolled {
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  padding: 0.6rem 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  font-family: var(--font-serif);
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0.5rem;
+  right: 0.5rem;
+  height: 2px;
+  background: var(--accent-gold);
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ===== HERO (parallax effect) ===== */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  /* background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format') center/cover fixed; */
+  background: url('/hero-image.jpg') center/cover fixed;
+  background-attachment: fixed; /* PARALLAX */
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+}
+
+.hero-content h1 {
+  text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: fadeInUp 1.2s;
+}
+
+.hero-content .lead {
+  font-size: 1.4rem;
+  font-weight: 300;
+  animation: fadeInUp 1.2s 0.1s both;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== CARDS / IMAGE HOVER ===== */
+.dish-card {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.dish-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.12) !important;
+}
+
+.overflow-hidden {
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+}
+
+.dish-card img {
+  transition: transform 0.5s ease;
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.dish-card:hover img {
+  transform: scale(1.08);
+}
+
+/* gallery hover */
+.gallery-img {
+  transition: transform 0.4s, filter 0.4s;
+  filter: grayscale(0.2) brightness(0.98);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+  filter: grayscale(0) brightness(1.02);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+/* ===== MENU TABS ===== */
+.nav-pills .btn-outline-dark {
+  border-width: 2px;
+  color: #2b2b2b;
+  font-weight: 600;
+}
+
+.nav-pills .btn-outline-dark.active,
+.nav-pills .btn-outline-dark:hover {
+  background-color: var(--primary-dark) !important;
+  color: #fff !important;
+  border-color: var(--primary-dark);
+}
+
+.menu-item {
+  font-size: 1.2rem;
+}
+
+/* ===== TESTIMONIALS ===== */
+#testimonials .carousel-item {
+  min-height: 240px;
+}
+
+/* ===== RESERVATION FORM ===== */
+#reservationForm input,
+#reservationForm select,
+#reservationForm textarea {
+  border: 1px solid #ddd;
+  padding: 0.8rem 1.2rem;
+  background-color: #fefefe;
+}
+
+#reservationForm input:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 0.2rem rgba(200,169,126,0.25);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #111;
+  font-size: 0.95rem;
+}
+
+/* ===== RESPONSIVE TWEAKS ===== */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  .hero-content .lead {
+    font-size: 1.2rem;
+  }
+  #mainNavbar {
+    background: rgba(0,0,0,0.7);
+    padding: 0.5rem 0;
+  }
+  .navbar-collapse {
+    background: rgba(0,0,0,0.9);
+    padding: 1rem;
+    border-radius: 16px;
+  }
+}
