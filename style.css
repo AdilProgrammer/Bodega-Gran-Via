@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5 {
   position: relative;
   height: 100vh;
   /* background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format') center/cover fixed; */
-  background: url('hero-image.jpg') center/cover fixed;
+  background: url('./hero-image.jpg') center/cover fixed;
   background-attachment: fixed; /* PARALLAX */
   z-index: 1;
 }
